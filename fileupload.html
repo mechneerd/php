@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FORM FOR PRACTICE</title>
+   
+  </head>
+
+  <body>
+	<h1 style="color:#A9A9A9; margin-left:300px; margin-top:50px;'">Fill the form </h1>
+	<?php echo $message ?? null ?>
+  <div id="cont" style="background-color:#F0FFFF;display:flex;width:250px;height:300px;margin-left:300px;margin-top:20px;">
+	<form action="<?php echo $_SERVER['PHP_SELF'];?>" enctype="multipart/form-data" method="POST">	
+	<p>Select a file to upload</p><br>
+	<input type="file" name='upload'></input><br>
+	<input type='submit' name="submit" value="submit"></input>
+	<form>
+  </div>
+<?php
+
+
+ if(isset($_POST['submit'])){
+	if(!empty($_files['upload']['name'])){
+		
+		}else{}
+ }else{
+      $message = 'please upload a file';
+ }
+
+
+?>
+
+  
+  </body>
+</html>
+
